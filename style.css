@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+
+html,
+body,
+nav,
+header,
+main,
+aside,
+footer,
+article,
+section, ul, li
+div {
+    margin: 0;
+    padding: 0px;
+}
+
+body {
+    background-color: #f7f5f3;
+    cursor: url(img/cursoredit.png), auto;
+    height: 100vh;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 3fr 1fr;
+    grid-template-areas:
+        "nav nav nav"
+        "mainbild mainbild maintext"
+        "mainbild mainbild maintext"
+        "subtext subtext subtext2";
+    grid-gap: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 4px 5px 6px rgb(213, 73, 173)
+}
+
+nav {
+    grid-area: nav;
+}
+
+
+/*
+.lokalnav {
+    grid-area: lokalnav;
+    background-color: dodgerblue;
+    overflow-wrap: normal;
+    text-align: center;
+}
+
+.globalnav {
+    grid-area: globalnav;
+    background-color: chocolate;
+    text-align: center;
+    
+
+}
+
+.suppnav {
+    grid-area: suppnav;
+    background-color: rgb(182, 114, 184);
+    text-align: center;
+}
+*/
+
+#mainbild {
+    grid-area: mainbild;
+    background-color: #81715f;
+    max-width: 100%;
+    overflow: hidden;
+    display: inline
+}
+
+.maintext {
+    grid-area: maintext;
+    background-color: #eda9d9;
+    text-align: center;
+    padding: 20px;
+}
+
+.subtext {
+    grid-area: subtext;
+    background-color: #e497b7;
+    text-align: center;
+
+}
+
+.subtext2 {
+    grid-area: subtext2;
+    background-color: #e497b7;
+
+    text-align: center;
+}
+
+.produkter{
+    grid-area:mainbild;
+}
+
+.vänsterbild{
+    grid-area: mainbild;
+    width: 33%;
+    display: inline-block;
+    float: right;
+    
+}
+.högerbild{
+    grid-area: mainbild;
+    width: 33%;
+    display: inline-block;
+    grid-column-start: 2;
+}
+
+
+ul{
+    list-style: none;
+    background-color: #daafcd;
+    display: flex;
+    justify-content: center;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+    padding: 8px 16px;
+}
+ul li a{
+    display: block;
+    padding: 20px 35px;
+    color: rgb(0, 0, 0);
+    
+    
+}
+
+ul li ul.dropmeny li {
+display: block;
+border: 1px solid black;
+}
+
+ul li ul.dropmeny{
+    width: 100%;
+    position: absolute;
+    display: none;
+
+}
+ul li a:hover{
+    background-color: #d47cba;
+}
+ul li:hover ul.dropmeny{
+    display: block;
+}
